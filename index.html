@@ -17,6 +17,7 @@
       align-items: center;
       overflow: hidden;
       position: relative;
+      flex-direction: column;
     }
 
     .card {
@@ -54,17 +55,6 @@
       font-weight: bold;
       color: #d81b60;
       font-size: 1.2rem;
-    }
-
-    @keyframes slideUp {
-      from {
-        opacity: 0;
-        transform: translateY(60px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
 
     .heart {
@@ -111,16 +101,57 @@
         opacity: 0;
       }
     }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(60px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #surpriseBtn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    #surpriseBtn:hover {
+      background-color: #c2185b;
+    }
+
+    #hiddenMessage {
+      display: none;
+      margin-top: 25px;
+      font-size: 1.1rem;
+      color: #4a148c;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
 
-  <!-- Hearts -->
+  <!-- Floating hearts -->
   <div class="heart" style="left: 10%; animation-delay: 0s; --random: 0.1;"></div>
   <div class="heart" style="left: 20%; animation-delay: 2s; --random: 0.3;"></div>
   <div class="heart" style="left: 30%; animation-delay: 4s; --random: 0.5;"></div>
   <div class="heart" style="left: 60%; animation-delay: 1s; --random: 0.6;"></div>
   <div class="heart" style="left: 80%; animation-delay: 3s; --random: 0.8;"></div>
+
+  <!-- Background music -->
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-romantic.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
   <div class="card">
     <h1>Happy 17th Birthday, Lina 🎂</h1>
@@ -131,6 +162,14 @@
       <p>Keep smiling, keep shining, and always be you. I’m so proud of you and lucky to have you in my life.</p>
       <p class="final">I love you so much, Lina 💕</p>
     </div>
+    <button id="surpriseBtn">Click for a Surprise 🎁</button>
+    <div id="hiddenMessage">kan bghik bzzzzf my only girl remeber hbiba diali bli nti ahssn driya 3rtha fhyati i love u sooo much bzzzzzzf ur the best a lina diali ❤️ - Yahya</div>
   </div>
+
+  <script>
+    document.getElementById("surpriseBtn").addEventListener("click", function () {
+      document.getElementById("hiddenMessage").style.display = "block";
+    });
+  </script>
 </body>
 </html>
