@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Lina 🎉</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to top right, #ffd6e8, #ffe3f1, #ffeef7);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card {
+      background: white;
+      border-radius: 25px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+      max-width: 600px;
+      padding: 40px 30px;
+      text-align: center;
+      animation: slideUp 1.2s ease-out;
+    }
+
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.8rem;
+      color: #e91e63;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #ad1457;
+      font-size: 1.1rem;
+      margin-bottom: 25px;
+    }
+
+    .message {
+      color: #6a1b9a;
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+    }
+
+    .final {
+      margin-top: 30px;
+      font-weight: bold;
+      color: #d81b60;
+      font-size: 1.2rem;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(60px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #ff69b4;
+      transform: rotate(45deg);
+      animation: floatHearts 10s infinite ease-in-out;
+      opacity: 0.6;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #ff69b4;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes floatHearts {
+      0% {
+        bottom: -20px;
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        bottom: 110%;
+        left: calc(100% * var(--random));
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hearts -->
+  <div class="heart" style="left: 10%; animation-delay: 0s; --random: 0.1;"></div>
+  <div class="heart" style="left: 20%; animation-delay: 2s; --random: 0.3;"></div>
+  <div class="heart" style="left: 30%; animation-delay: 4s; --random: 0.5;"></div>
+  <div class="heart" style="left: 60%; animation-delay: 1s; --random: 0.6;"></div>
+  <div class="heart" style="left: 80%; animation-delay: 3s; --random: 0.8;"></div>
+
+  <div class="card">
+    <h1>Happy 17th Birthday, Lina 🎂</h1>
+    <p class="subtitle">From your Yahya 💖</p>
+    <div class="message">
+      <p>Even though we’re far apart today, I wanted to give you something sweet and made with love 💌</p>
+      <p>You’re turning 17 — beautiful, strong, and full of dreams 🌟</p>
+      <p>Keep smiling, keep shining, and always be you. I’m so proud of you and lucky to have you in my life.</p>
+      <p class="final">I love you so much, Lina 💕</p>
+    </div>
+  </div>
+</body>
+</html>
